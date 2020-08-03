@@ -1,13 +1,18 @@
 from django.shortcuts import render, redirect
 from .forms import PostForm
+from .models import Post
 
 
 def index(request):
     context = {}
     if request.method == 'GET':
-        context = {
-            'form': PostForm
-        }
+        try:
+            latest_post = Post.objects.latest('date_pub')
+            posts = Post.objects.all()[:10]
+            context['latest_post'] = latest_post
+            context['posts'] = posts
+        except ValueError:
+            print("lol")
     return render(request, 'index.html', context)
 
 

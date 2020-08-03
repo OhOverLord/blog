@@ -14,7 +14,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=150, unique=True, blank=True)
     body = models.TextField(blank=True, db_index=True)
     date_pub = models.DateTimeField(auto_now_add=True)
-    preview = models.FileField(upload_to='static/documents/%Y/%m/%d')
+    preview = models.FileField(upload_to='documents/%Y/%m/%d')
 
     def get_absolute_url(self):
         return reverse('post_detail_url', kwargs={'slug': self.slug})
