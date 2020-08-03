@@ -9,7 +9,7 @@
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic" style="color:blue">{{ latest_post.title }}</h1>
       <p class="lead my-3">{{ latest_post.body|truncatewords:15 }}</p>
-      <button type="button" class="btn btn-primary" href="">Читать</button>
+      <a type="button" class="btn btn-primary" href="{{ latest_post.get_absolute_url }}">Читать</a>
     </div>
     <img src="{{ MEDIA_URL }}{{ latest_post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="img-thumbnail w-25">
 </div>
@@ -22,7 +22,7 @@
                   <h3 class="mb-0">{{ post.title }}</h3>
                   <div class="mb-1 text-muted">{{ post.date_pub }}</div>
                   <p class="card-text mb-auto">{{ post.body|truncatewords:15 }}</p>
-                  <button type="button" class="btn btn-primary" href="">Читать</button>
+                  <a type="button" class="btn btn-primary" href="{{ post.get_absolute_url }}">Читать</a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <img src="{{ MEDIA_URL }}{{ post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="bd-placeholder-img w-25">
