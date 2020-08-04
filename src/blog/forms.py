@@ -12,6 +12,6 @@ class PostForm(forms.ModelForm):
             'preview': 'Превью'
         }
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'input-title-post', 'placeholder': 'Введите название статьи'}),
+            'body': forms.Textarea(attrs={'class': 'input-body'}),
         }

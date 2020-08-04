@@ -1,3 +1,4 @@
+from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import PostForm
@@ -12,8 +13,8 @@ def index(request):
             posts = Post.objects.all()[1:10]
             context['latest_post'] = latest_post
             context['posts'] = posts
-        except ValueError:
-            return HttpResponse('<h1>Post not found/h1>')
+        except ObjectDoesNotExist:
+            return redirect('add_post/')
     return render(request, 'index.html', context)
 
 

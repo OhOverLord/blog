@@ -4,32 +4,30 @@
 {% endblock %}
 
 {% block content %}
-{% load static %}
-<div class="jumbotron p-4 p-md-5 rounded bg-light d-flex justify-content-between">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic" style="color:blue">{{ latest_post.title }}</h1>
-      <p class="lead my-3">{{ latest_post.body|truncatewords:15 }}</p>
-      <a type="button" class="btn btn-primary" href="{{ latest_post.get_absolute_url }}">Читать</a>
+<div class="fresh-article-container">
+    <p class="new">NEW</p>
+    <div class="fresh-artictle">
+        <p>{{ latest_post.title }}</p>
     </div>
-    <img src="{{ MEDIA_URL }}{{ latest_post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="img-thumbnail w-25">
+    <p class="fresh-article-text">
+        {{ latest_post.body|truncatewords:15 }}
+    </p>
+    <img src="{{ MEDIA_URL }}{{ latest_post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="fresh-article-preview">
+    <a href="{{ latest_post.get_absolute_url }}" class="redirect-btn"><p class="redirect-text">Читать</p></a>
 </div>
 
-    <div class="row mb-2">
-        {% for post in posts %}
-            <div class="col-md-6">
-              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">{{ post.title }}</h3>
-                  <div class="mb-1 text-muted">{{ post.date_pub }}</div>
-                  <p class="card-text mb-auto">{{ post.body|truncatewords:15 }}</p>
-                  <a type="button" class="btn btn-primary" href="{{ post.get_absolute_url }}">Читать</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src="{{ MEDIA_URL }}{{ post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="bd-placeholder-img w-25">
-                </div>
-              </div>
+<span class="other-articles-text">Другие статьи</span>
+<div class="other-articles-container">
+    {% for post in posts %}
+        <a href="{{ post.get_absolute_url }}" style="text-decoration: none;">
+            <div class="article-container">
+                <p style="opacity: 50%; color: black;">28 июня 2019 18:34</p>
+                <img src="{{ MEDIA_URL }}{{ post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="article-preview">
+                <span class="articte-title-text">
+                    {{ post.title }}
+                </span>
             </div>
-        {% endfor %}
-    </div>
+        </a>
+    {% endfor %}
 </div>
 {% endblock %}

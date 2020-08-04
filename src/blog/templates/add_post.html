@@ -4,11 +4,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-success">Опубликовать</button>
-    </form>
-</div>
+<form method="POST" enctype="multipart/form-data" class="add-post-container">
+    {% csrf_token %}
+    <span class="add-post-text">Добавить статью</span>
+    <div class="input-container">
+        {{ form.title }}
+        <input type="submit" class="input-bth" value="Опубликовать">
+    </div>
+    <div style="display: flex;">
+        {{ form.body }}
+        <div class="input-image">
+            <p class="upload-img">Загрузить изображение</p>
+            {{ form.preview }}
+        </div>
+    </div>
+</form>
 {% endblock %}
