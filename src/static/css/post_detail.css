@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(236, 236, 236);
+}
+
+.post-detail-title {
+    position: static;
+    width: 400px;
+    height: 123px;
+    display: block;
+
+    font-family: Museo Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 128%;
+
+    letter-spacing: -0.416667px;
+
+    color: #315AF2;
+}
+
+.post-detail-container {
+    width: 607px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.post-body {
+    padding-top: 10px;
+    width: 540px;
+    height: 220px;
+    left: 0px;
+    top: 679px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Circe Rounded;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 128%;
+
+    color: #404040;
+}
+
+.post-preview {
+    width: 624px;
+    height: 568px;
+    left: -12px;
+    top: 74px;
+    border-radius: 12px;
+}

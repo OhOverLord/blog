@@ -1,0 +1,91 @@
+.add-post-container {
+    width: 68%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 59px;
+}
+
+.add-post-text {
+    font-family: Museo Cyrl;
+    font-size: 45px;
+    line-height: 52px;
+
+    letter-spacing: -0.416667px;
+
+    color: #315AF2;
+}
+
+.input-container {
+    margin-top: 40px;
+}
+
+.input-title-post {
+    width: 700px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border: 2px solid #CDCDCD;
+    border-radius: 3px;
+    font-family: Circe Rounded;
+    font-size: 24px;
+    line-height: 52px;
+
+    letter-spacing: -0.416667px;
+
+    color: #315AF2;
+}
+
+.input-bth {
+    width: 159px;
+    height: 50px;
+    margin-left: 13px;
+
+    background: #E9399C;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+
+    font-family: Museo Cyrl;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.input-body {
+    width: 890px;
+    height: 478px;
+    margin-top: 37px;
+
+    background: #FFFFFF;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    vertical-align: top;
+}
+
+.input-image {
+    width: 298px;
+    height: 318px;
+    display: block;
+    margin-top: 35px;
+    margin-left: 15px;
+    text-align: center;
+
+    background: #FFFFFF;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.upload-img {
+    width: 255px;
+    height: 31px;
+    font-family: Circe Rounded;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #315AF2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
