@@ -21,7 +21,7 @@
     {% for post in posts %}
         <a href="{{ post.get_absolute_url }}" style="text-decoration: none;">
             <div class="article-container">
-                <p style="opacity: 50%; color: black;">28 июня 2019 18:34</p>
+                <p style="opacity: 50%; color: black;">{{ post.date_pub }}</p>
                 <img src="{{ MEDIA_URL }}{{ post.preview }}" alt="Т.к. heroku не сохраняет картинки, она не отобразится" class="article-preview">
                 <span class="articte-title-text">
                     {{ post.title }}
